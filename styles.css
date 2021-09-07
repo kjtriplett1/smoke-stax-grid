@@ -13,17 +13,14 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   background-color: rgb(136, 185, 145);
   box-shadow: 10px 7px 20px 3px black inset;
- 
 }
 
 .grid-container > div {
-  padding: 10px;
+  padding: 7px;
   text-align: center;
 }
 
-.item {
-  background-color: rgb(125, 173, 133);
-}
+
 
 .welcome {
   grid-row: 1;
@@ -62,8 +59,8 @@ body {
 
 .smokeshop {
   grid-column: 1 / span 2;
-  justify-content: center;
- 
+  align-self: center;
+
 }
 
 .contact {
@@ -76,6 +73,8 @@ body {
 
 .vapeshop {
   grid-column: 7 /span 2;
+  align-self: center;
+
 }
 
 .sign img {
@@ -98,21 +97,24 @@ body {
 }
 
 .message {
-  box-shadow: 7px 7px 20px 3px black inset;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  box-shadow: 30px 7px 20px 3px black inset;
+  margin: 10px;
   border-radius: 30px;
 }
 
 .message img {
-  padding: 5px;
-  border-radius: 50px;
+  padding: 3px;
+  border-radius: 20px;
   border: 5px solid rgb(63, 66, 63);
-  background-color: rgb(40, 196, 35);
+  background-color: rgb(170, 26, 38);
   animation: bling2 2s infinite; /*@keyframes named bling*/
 }
 
 /*picture list of stuff the store has*/
+.item {
+  background-color: rgb(125, 173, 133);
+}
+
 .item.one {
   grid-column: 1 / span 2;
   border-top: 5px double black;
@@ -195,6 +197,7 @@ img {
   50% {box-shadow: 200px 200px 30px 3px rgb(238, 223, 227) inset;}
 }
 
+/*breakpoint for smaller screens*/
 @media only screen and (max-width: 767px) {
   .welcome {
     grid-row: 1;
@@ -221,6 +224,20 @@ img {
   .vapeshop {
     grid-row: 5;
     grid-column: 1 / span 8;
+  }
+  .message.one {
+    grid-column: 1 / span 4;
+    grid-row: 6;
+  }
+  
+  .message.two {
+    grid-column: 1 /span 8;
+    grid-row: 7;
+  }
+  
+  .message.three {
+    grid-column: 5 / span 5;
+    grid-row: 6;
   }
   }
   
